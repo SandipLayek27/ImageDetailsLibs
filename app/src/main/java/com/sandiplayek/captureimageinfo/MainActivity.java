@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             Uri uri = imageInformation.getImageUri(bitmapPhoto);
             String realPath = imageInformation.getRealPathFromURI(uri);
             File file = imageInformation.getActualPath(realPath);
+            byte[] fileInBytes = imageInformation.getFileInByteArray(realPath);
 
             // IMAGE PROP SECTION CALL
             long size = imageInformation.getFileSizeInKB(file);

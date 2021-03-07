@@ -53,6 +53,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         int width = imageInformation.getImageFileWidth(bitmapPhoto);
         String ext = imageInformation.getFileExtension(realPath);
         String fileName = imageInformation.getFileName(realPath);
+        byte[] fileInBytes = imageInformation.getFileInByteArray(realPath);
       
         ExifInterface exifInterface = imageCaptureDate(realPath);
         String TAG_ARTIST = exifInterface.TAG_ARTIST;
