@@ -23,7 +23,7 @@ allprojects{
 }
 AND
 dependencies {
-    implementation 'com.github.SandipLayek27:ImageDetailsLibs:1.0'
+    implementation 'com.github.SandipLayek27:ImageDetailsLibs:1.2'
 }
 ```
 ## Android Code Setup
