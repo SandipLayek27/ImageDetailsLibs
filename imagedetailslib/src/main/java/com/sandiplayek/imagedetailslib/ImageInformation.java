@@ -53,6 +53,11 @@ public class ImageInformation {
         return photo;
     }
 
+    public Bitmap getBitmapFormatImage(Intent data){
+        Bitmap photo = (Bitmap) data.getExtras().get("data");
+        return photo;
+    }
+
     public long getFileSizeInKB(File file){
         long length = file.length();
         length = length/1024;

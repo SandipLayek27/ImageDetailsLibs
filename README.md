@@ -42,7 +42,12 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
         ImageInformation imageInformation = new ImageInformation(MainActivity.this);
         // FETCH BASIC INFORMATION
+        // IF YOU WANT TO SET IMAGE TO IMAGE VIEW
         Bitmap bitmapPhoto = imageInformation.setImageToImageView(ivPreview,data);
+        
+        // IF YOU ONLY GET BITMAP IMAGE THEN YOU SET MANUALLY
+        Bitmap bitmapPhoto1 = imageInformation.getBitmapFormatImage(data);
+
         Uri uri = imageInformation.getImageUri(bitmapPhoto);
         String realPath = imageInformation.getRealPathFromURI(uri);
         File file = imageInformation.getActualPath(realPath);
