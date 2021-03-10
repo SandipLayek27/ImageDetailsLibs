@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.ExifInterface;
 import android.net.Uri;
 import android.provider.MediaStore;
@@ -117,5 +118,10 @@ public class ImageInformation {
             System.err.println(e2.getMessage());
         }
         return bos != null ? bos.toByteArray() : null;
+    }
+
+    public Bitmap getBitmapFromByteArray(byte[] imageByteArray){
+        Bitmap bmp= BitmapFactory.decodeByteArray(imageByteArray, 0 , imageByteArray.length);
+        return bmp;
     }
 }
