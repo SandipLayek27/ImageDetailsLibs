@@ -23,7 +23,7 @@ allprojects{
 }
 AND
 dependencies {
-    implementation 'com.github.SandipLayek27:ImageDetailsLibs:1.2'
+    implementation 'com.github.SandipLayek27:ImageDetailsLibs:1.3'
 }
 ```
 ## Android Code Setup
@@ -49,6 +49,9 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         Bitmap bitmapPhoto1 = imageInformation.getBitmapFormatImage(data);
 
         Uri uri = imageInformation.getImageUri(bitmapPhoto);
+        // SET DYNAMIC QUALITY
+        Uri uriDynamicQuality = imageInformation.getImageUri(bitmapPhoto,50);
+
         String realPath = imageInformation.getRealPathFromURI(uri);
         File file = imageInformation.getActualPath(realPath);
 

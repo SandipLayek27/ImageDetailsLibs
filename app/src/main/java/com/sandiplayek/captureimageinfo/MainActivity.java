@@ -54,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
             Bitmap bitmapPhoto1 = imageInformation.getBitmapFormatImage(data);
 
             Uri uri = imageInformation.getImageUri(bitmapPhoto);
+            // SET DYNAMIC QUALITY
+            Uri uriDynamicQuality = imageInformation.getImageUri(bitmapPhoto,50);
+
             String realPath = imageInformation.getRealPathFromURI(uri);
             File file = imageInformation.getActualPath(realPath);
             byte[] fileInBytes = imageInformation.getFileInByteArray(realPath);
